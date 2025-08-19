@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Card,
   CardContent,
@@ -11,8 +11,10 @@ import {
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { ShopContext } from '../Context';
 
-function ShopItem({ item, addToCart, order, handleMinus, handlePlus }) {
+function ShopItem({ item }) {
+  const { addToCart, order, handleMinus, handlePlus } = useContext(ShopContext);
   const imageUrl =
     item.displayAssets[0].background ||
     'https://dummyimage.com/200x200/ffffff/000000.png&text=No+Image';

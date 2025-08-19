@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Box, IconButton, Badge } from '@mui/material';
+import { ShopContext } from '../Context';
 
-function Cart({ quantity = 0, handleToggle }) {
+function CartIcon({ quantity = 0 }) {
+  const { handleToggle } = useContext(ShopContext);
   return (
     <Box>
       <IconButton disableRipple onClick={handleToggle}>
@@ -14,4 +16,4 @@ function Cart({ quantity = 0, handleToggle }) {
   );
 }
 
-export default Cart;
+export default CartIcon;

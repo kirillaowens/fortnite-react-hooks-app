@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography, Button, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { ShopContext } from '../Context';
 
-function CartItem({ item, handlePlus, handleMinus, removeOutOfCart }) {
+function CartItem({ item }) {
+  const { handlePlus, handleMinus, removeOutOfCart } = useContext(ShopContext);
+
   return (
     <Box
-      key={item.mainId}
       sx={{
         border: '1px solid #ccc',
         borderRadius: 1,

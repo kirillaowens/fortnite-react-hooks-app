@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Grid } from '@mui/material';
 import ShopItem from './ShopItem';
+import { ShopContext } from '../Context';
 
-function Shop({ goods, addToCart, order, handlePlus, handleMinus }) {
+function ShopList() {
+  const { goods } = useContext(ShopContext);
   return (
     <Grid
       container
@@ -12,17 +14,11 @@ function Shop({ goods, addToCart, order, handlePlus, handleMinus }) {
     >
       {goods.map((item) => (
         <Grid size={{ xs: 10, sm: 8, md: 3 }} key={item.mainId}>
-          <ShopItem
-            item={item}
-            addToCart={addToCart}
-            order={order}
-            handlePlus={handlePlus}
-            handleMinus={handleMinus}
-          />
+          <ShopItem item={item} />
         </Grid>
       ))}
     </Grid>
   );
 }
 
-export default Shop;
+export default ShopList;

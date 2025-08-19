@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { ShopContext } from '../Context';
 
-function Languages({ value, onChange }) {
+function Languages({ value }) {
+  const { handleLanguage } = useContext(ShopContext);
+
   return (
     <Box>
       <FormControl variant="standard" sx={{ minWidth: 100 }}>
@@ -11,7 +14,7 @@ function Languages({ value, onChange }) {
           id="demo-simple-select-standard"
           label="Filters"
           value={value}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => handleLanguage(e.target.value)}
         >
           <MenuItem value="en">
             <em>English</em>

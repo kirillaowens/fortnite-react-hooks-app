@@ -1,15 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Modal, Box, Typography } from '@mui/material';
 import CartItem from './CartItem';
+import { ShopContext } from '../Context';
 
-function OpenedCart({
-  open,
-  handleToggle,
-  order,
-  handlePlus,
-  handleMinus,
-  removeOutOfCart,
-}) {
+function OpenedCart() {
+  const { open, handleToggle, order } = useContext(ShopContext);
+
   return (
     <Modal
       open={open}
@@ -45,14 +41,7 @@ function OpenedCart({
         {order.length === 0 ? (
           <Typography variant="body2">Your cart is empty</Typography>
         ) : (
-          order.map((item) => (
-            <CartItem
-              item={item}
-              handlePlus={handlePlus}
-              handleMinus={handleMinus}
-              removeOutOfCart={removeOutOfCart}
-            />
-          ))
+          order.map((item) => <CartItem key={item.mainId} item={item} />)
         )}
       </Box>
     </Modal>
