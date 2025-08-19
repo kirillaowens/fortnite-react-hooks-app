@@ -15,7 +15,7 @@ function Footer() {
     >
       <Toolbar sx={{ justifyContent: 'center' }}>
         <Typography variant="body2" color="inherit">
-          © {new Date().getFullYear()} Movies App. All rights reserved.
+          © {new Date().getFullYear()} Fortnite Shop App. All rights reserved.
         </Typography>
       </Toolbar>
     </AppBar>
