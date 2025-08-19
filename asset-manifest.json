@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/fortnite-react-hooks-app/static/js/main.4ed5a0f4.js",
+    "main.js": "/fortnite-react-hooks-app/static/js/main.b90f56a5.js",
     "index.html": "/fortnite-react-hooks-app/index.html",
-    "main.4ed5a0f4.js.map": "/fortnite-react-hooks-app/static/js/main.4ed5a0f4.js.map"
+    "main.b90f56a5.js.map": "/fortnite-react-hooks-app/static/js/main.b90f56a5.js.map"
   },
   "entrypoints": [
-    "static/js/main.4ed5a0f4.js"
+    "static/js/main.b90f56a5.js"
   ]
 }
